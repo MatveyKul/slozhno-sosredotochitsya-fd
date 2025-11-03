@@ -1,4 +1,31 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  /* ТОЛЬКО темная тема по умолчанию */
+  --page-background-image: url("../images/cover-image-dark.png");
+  --page-background-color: #1a1a1a;
+  --rec-color: #FF0070;
+  --accent-color: #FF0070;
+  --text-color: #F1B2CE;
+  --background-color: #000028;
+  --title-color: #DB00FF;
+  --card-bg: #FF0070;
+  --card-text: #ffffff;
+  --section-title-color: #FF0070;
+  --link-shadow: #FF0070;
+  --button-color: #FF0070;
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --decorated-zone-color: #FF0070;
+  --section-subtitle-bg: #FF0070;
+  --section-subtitle-color: #000028;
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --rec-color: transparent;
+    /* остальные переменные светлой темы... */
+  }
+
+  /* Скрываем REC в авто-теме при светлых системных настройках */
+  .theme-auto .rec {
+    display: none;
+  }
+}
