@@ -306,11 +306,6 @@
     margin-right: 30px;
     margin-bottom: 20px;
   }
-  
-  .decorated-zone::after {
-    margin-bottom: 20px;
-    left: 10px;
-  }
 
   .section-why-concentration-hard {
     display: grid;
@@ -425,10 +420,6 @@
   .decorated-zone::after {
     bottom: 0px;
     left: 20px;
-  }
-
-  .decorated-zone-footer::after {
-    bottom: 0px;
   }
   
   .rec {
