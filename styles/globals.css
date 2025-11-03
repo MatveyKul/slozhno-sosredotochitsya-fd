@@ -7,9 +7,8 @@
 }
 
 html, body {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
-
 
 body {
   min-inline-size: 375px;
