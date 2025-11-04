@@ -418,7 +418,7 @@
   }
 
   .decorated-zone::after {
-    bottom: 0px;
+    bottom: 20px;
     left: 20px;
   }
   
@@ -556,8 +556,9 @@
   }
   
   .footer__title {
-    margin-top: 0;
-    margin-left: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-top: 35px;
+    margin-left: 15px;
   }
 
   .decorated-zone::before {
@@ -575,7 +576,7 @@
   }
 
   .decorated-zone-footer::after {
-    bottom: 10px;
+    bottom: 0px;
   }
   
   .rec {
