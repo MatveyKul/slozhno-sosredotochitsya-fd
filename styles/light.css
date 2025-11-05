@@ -23,14 +23,10 @@
   --section-subtitle-color: #353430;
 }
 
-/* Скрываем REC в светлой теме */
-.theme-light .rec {
-  display: none;
-}
-
-.card__text {
-  color: var(--card-text, #353430);
-}
+  /* Скрываем REC в светлой теме */
+  .theme-light .rec {
+    display: none;
+  }
 
 /* Авто-тема при светлых системных настройках */
 @media (prefers-color-scheme: light) {
@@ -51,6 +47,6 @@
     --section-subtitle-bg: #FF8DCB;
     --section-subtitle-color: #353430;
   }
-  
+
 
 }

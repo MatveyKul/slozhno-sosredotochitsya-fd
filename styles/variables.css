@@ -18,14 +18,13 @@
   --section-subtitle-color: #000028;
 }
 
-@media (prefers-color-scheme: light) {
-  :root.theme-auto {
-    --rec-color: transparent;
-    /* остальные переменные светлой темы... */
-  }
-
-  /* Скрываем REC в авто-теме при светлых системных настройках */
-  .theme-auto .rec {
-    display: none;
-  }
+:root.theme-auto {
+  --rec-color: transparent;
+  /* остальные переменные светлой темы... */
 }
+
+/* Скрываем REC в авто-теме при светлых системных настройках */
+.theme-auto .rec {
+  display: none;
+}
+

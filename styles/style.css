@@ -3,6 +3,24 @@
   min-height: 100vh;
   background-color: var(--background-color);
   background-attachment: fixed;
+  background-color: var(--page-background-color);
+  background-image: var(--page-background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Переменные для шрифтов */
+:root {
+  --font-family: 'IBM Plex Mono', monospace;
+  --font-size-base: 18px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 23.4px;
+  --line-height-title: 82.5%;
+  --line-height-button: 18px;
+  --line-height-rec: 25px;
 }
 
 .header {
@@ -10,14 +28,9 @@
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
   padding: 0px;
-  background-color: var(--page-background-color);
-  background-image: var(--page-background-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 /* Стили для декоративных уголков */
@@ -68,10 +81,10 @@
   border: 1px solid transparent;
   padding: 2px 12px;
   color: var(--button-color, #FF0070);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-button);
   text-transform: lowercase;
   background: transparent;
   cursor: pointer;
@@ -100,10 +113,10 @@
   top: 10px;
   right: 38px;
   color: var(--rec-color, #FF0070);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-rec);
   text-transform: uppercase;
 }
 
@@ -123,10 +136,10 @@
 .header__title {
   margin-left: 10px;
   color: var(--title-color, #DB00FF);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 82.5%;
+  line-height: var(--line-height-title);
   text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
 }
 
@@ -140,10 +153,10 @@
 
 .title-decor {
   color: var(--section-subtitle-color, #000028);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23.4px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   background-color: var(--section-subtitle-bg, #FF0070);
 }
 
@@ -157,19 +170,22 @@
   margin: 0 auto;
 }
 
-/* Стили для секций */
-.section-why-concentration-hard,
-.section-what-reduces-concentration, 
-.section-how-to-concentrate-better {
+/* Общие стили для секций */
+.section {
   margin-bottom: 50px;
 }
 
 .section__title {
   margin-bottom: 20px;
   color: var(--section-title-color, #FF0070);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+}
+
+/* Узкий заголовок для конкретной секции */
+.section__title_narrow {
+  width: 120px;
 }
 
 /* Сетка карточек */
@@ -177,6 +193,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.cards-grid_columns_three {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Стили карточек */
@@ -187,15 +207,15 @@
 }
 
 .card__title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
 }
 
 .card__subtitle {
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
 }
 
 .card__top-title {
@@ -227,15 +247,15 @@
 .card__text {
   margin: 0;
   color: var(--text-color, #F1B2CE);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23.4px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 /* Модификаторы */
 .card__font-reg {
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
 }
 
 /* Галерея */
@@ -260,27 +280,28 @@
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
   padding: 10px;
   margin-top: 40px;
 }
 
 .footer__title {
   color: var(--title-color, #DB00FF);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 700;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 82.5%;
+  line-height: var(--line-height-title);
   text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
-}
-
-.decorated-zone-footer::after {
-  bottom: 10px;
 }
 
 /* Медиа-запрос для планшетов (768px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
+    min-height: 1024px;
+  }
+
+  .footer {
     min-height: 1024px;
   }
 
@@ -296,26 +317,29 @@
   }
 
   .header__title {
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 0;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   
   .header__description {
     width: 364px;
-    margin-right: 30px;
     margin-bottom: 20px;
+    margin-right: 30px;
+  }
+
+  .main-content {
+    margin-top: 20px;
   }
 
   .section-why-concentration-hard {
     display: grid;
     grid-template-columns: 220px minmax(472px, 0fr);
     gap: 45px;
-    margin-top: 20px;
   }
 
   .section__title {
-    justify-self: start;
+    width: 230px;
     margin: 0;
     margin-left: 10px;
   }
@@ -323,13 +347,9 @@
   .section-what-reduces-concentration {
     margin-top: 80px;
   }
-  
-  .section-what-reduces-concentration h2:nth-child(1) {
-    width: 120px;
-    margin-bottom: 20px;
-  }
 
-  .cards-grid--three-columns {
+  .multitasking-food-gadgets {
+    margin-top: 20px;
     width: 728px;
     margin-left: 10px;
   }
@@ -357,7 +377,7 @@
 
   .gallery-title {
     width: 728px;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-left: 10px;
   }
   
@@ -403,20 +423,19 @@
   }
 
   .footer {
-    min-height: 1024px;
     margin-top: 60px;
   }
-
+  
   .footer__title {
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 15px;
   }
-
+  
   .decorated-zone::before {
     top: 20px;
     right: 5px;
   }
-
+  
   .decorated-zone::after {
     bottom: 20px;
     left: 20px;
@@ -430,6 +449,16 @@
 
 /* Медиа-запрос для десктопов (1024px) */
 @media (min-width: 1024px) {
+  .header {
+    height: 100vh;
+    min-height: 768px;
+  }
+
+  .footer {
+    height: 100vh;
+    min-height: 768px;
+  }
+
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -465,6 +494,7 @@
     justify-self: start;
     margin: 0;
     margin-left: 10px;
+    width: 320px;
   }
 
   .section-what-reduces-concentration {
@@ -472,15 +502,13 @@
     margin-top: 80px;
   }
 
-  .section-what-reduces-concentration .section__title {
-    width: 300px;
-  }
-
-  .cards-grid--three-columns {
-    grid-template-columns: repeat(3, 1fr);
-    width: 984px;
+  .multitasking-food-gadgets {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    width: 983px;
     margin-top: 20px;
     margin-left: 10px;
+    gap: 20px; 
   }
 
   .cards-grid {
@@ -506,7 +534,7 @@
 
   .gallery-title {
     width: 984px;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-left: 10px;
   }
   
@@ -550,17 +578,17 @@
     width: 649px;
     margin-left: 345px;
   }
-
-  .footer {
-    min-height: 100vh;
-  }
   
+  .footer {
+    margin-top: 60px;
+  }
+
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-top: 35px;
-    margin-left: 15px;
+    margin-top: 0px;
+    margin-left: 20px;
   }
-
+  
   .decorated-zone::before {
     top: 20px;
     right: 5px;
@@ -569,14 +597,6 @@
   .decorated-zone::after {
     bottom: 20px;
     left: 20px;
-  }
-
-  .decorated-zone-footer::before {
-    top: 40px;
-  }
-
-  .decorated-zone-footer::after {
-    bottom: 0px;
   }
   
   .rec {
