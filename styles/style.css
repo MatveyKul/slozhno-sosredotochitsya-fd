@@ -196,7 +196,7 @@
   gap: 20px;
 }
 
-.multitasking-food-gadgets{
+.multitasking-food-gadgets {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -424,23 +424,19 @@
     width: 479px;
     margin-left: 260px;
   }
-
-  .footer {
-    margin-top: 60px;
-  }
   
   .footer__title {
-    margin-top: 0;
+    margin-top: 40px;
     margin-left: 15px;
   }
   
   .decorated-zone::before {
-    top: 20px;
+    top: 40px;
     right: 5px;
   }
   
   .decorated-zone::after {
-    bottom: 20px;
+    bottom: 0px;
     left: 20px;
   }
   
