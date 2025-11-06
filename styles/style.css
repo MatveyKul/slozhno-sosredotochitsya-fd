@@ -1,8 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
   min-height: 100vh;
-  background-color: var(--background-color);
-  background-attachment: fixed;
   background-color: var(--page-background-color);
   background-image: var(--page-background-image);
   background-repeat: no-repeat;
@@ -183,9 +181,12 @@
   font-size: var(--font-size-base);
 }
 
-/* Узкий заголовок для конкретной секции */
-.section__title_narrow {
-  width: 120px;
+.section-what-reduces-concentration-title {
+  margin-top: 50px;
+}
+
+.section__title--compact {
+  margin-top: 50px;
 }
 
 /* Сетка карточек */
@@ -195,7 +196,7 @@
   gap: 20px;
 }
 
-.cards-grid_columns_three {
+.multitasking-food-gadgets{
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -260,7 +261,7 @@
 
 /* Галерея */
 .gallery-title {
-  margin-top: 0px;
+  margin-top: 50px;
 }
 
 .gallery {
@@ -280,7 +281,6 @@
   position: relative;
   display: grid;
   place-items: center;
-  height: 100vh;
   min-height: 668px;
   padding: 10px;
   margin-top: 40px;
@@ -348,14 +348,17 @@
     margin-top: 80px;
   }
 
+  /* ИСПРАВЛЕНИЕ: секция "Что снижает концентрацию" в столбик */
   .multitasking-food-gadgets {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
     width: 728px;
+    margin-top: 20px;
     margin-left: 10px;
+    gap: 20px;
   }
 
   .cards-grid {
-    display: grid;
     gap: 20px;
   }
 
@@ -503,12 +506,12 @@
   }
 
   .multitasking-food-gadgets {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 983px;
     margin-top: 20px;
     margin-left: 10px;
-    gap: 20px; 
+    gap: 20px;
   }
 
   .cards-grid {
@@ -577,10 +580,6 @@
     grid-row: 3 / 4;
     width: 649px;
     margin-left: 345px;
-  }
-  
-  .footer {
-    margin-top: 60px;
   }
 
   .footer__title {
