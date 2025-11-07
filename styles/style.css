@@ -436,10 +436,6 @@
     min-height: 768px;
   }
 
-  .footer {
-    min-height: 768px;
-  }
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -561,6 +557,7 @@
   }
 
   .footer {
+    min-height: 768px;
     margin-top: 60px;
   }
 
