@@ -1,14 +1,12 @@
 :root {
   /* ТОЛЬКО темная тема по умолчанию */
   --page-background-image: url("../images/cover-image-dark.png");
-  --page-background-color: #1a1a1a;
+  --page-background-color: #000028;
   --rec-color: #FF0070;
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --background-color: #000028;
   --title-color: #DB00FF;
-  --card-bg: #FF0070;
-  --card-text: #ffffff;
   --section-title-color: #FF0070;
   --link-shadow: #FF0070;
   --button-color: #FF0070;
@@ -16,15 +14,15 @@
   --decorated-zone-color: #FF0070;
   --section-subtitle-bg: #FF0070;
   --section-subtitle-color: #000028;
+  --font-family: 'IBM Plex Mono', monospace;
+  --font-size-base: 18px;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 23.4px;
+  --line-height-title: 82.5%;
+  --line-height-button: 18px;
+  --line-height-rec: 25px;
 }
 
-:root.theme-auto {
-  --rec-color: transparent;
-  /* остальные переменные светлой темы... */
-}
 
-/* Скрываем REC в авто-теме при светлых системных настройках */
-.theme-auto .rec {
-  display: none;
-}
 

@@ -7,13 +7,10 @@
 /* Светлая тема при принудительном переключении */
 :root.theme-light {
   --page-background-image: url("../images/cover-image-light.png");
-  --page-background-color: #FFF1F7;
-  --rec-color: transparent;
   --accent-color: #FF8DCB;
   --text-color: #353430;
   --background-color: #FFF1F7;
   --title-color: #FFC2E6;
-  --card-text: #353430;
   --section-title-color: #353430;
   --link-shadow: #FF8DCB;
   --button-color: #353430;
@@ -23,22 +20,24 @@
   --section-subtitle-color: #353430;
 }
 
-  /* Скрываем REC в светлой теме */
-  .theme-light .rec {
-    display: none;
-  }
+.rec {
+  display: none;
+}
+
+.theme-dark .rec,
+:root:not(.theme-light) .rec {
+  display: block;
+}
 
 /* Авто-тема при светлых системных настройках */
 @media (prefers-color-scheme: light) {
   :root {
     --page-background-image: url("../images/cover-image-light.png");
     --page-background-color: #FFF1F7;
-    --rec-color: transparent;
     --accent-color: #FF8DCB;
     --text-color: #353430;
     --background-color: #FFF1F7;
     --title-color: #FFC2E6;
-    --card-text: #353430;
     --section-title-color: #353430;
     --link-shadow: #FF8DCB;
     --button-color: #353430;
@@ -48,5 +47,9 @@
     --section-subtitle-color: #353430;
   }
 
-
+  :root:not(.theme-dark) .rec {
+    display: none;
+  }
 }
+
+

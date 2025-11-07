@@ -6,15 +6,12 @@
 
 :root.theme-dark {
   --page-background-image: url("../images/cover-image-dark.png");
-  --page-background-color: #1a1a1a;
   --rec-color: #FF0070;
   --rec-shadow: #FF0070;
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --background-color: #000028;
   --title-color: #DB00FF;
-  --card-bg: #FF0070;
-  --card-text: #F1B2CE;
   --section-title-color: #FF0070;
   --link-shadow: #FF0070;
   --button-color: #FF0070;
